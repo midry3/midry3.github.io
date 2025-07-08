@@ -1,0 +1,19 @@
+title = "Midryのホームページ"
+languageCode = "ja-jp"
+languageName = "日本語"
+
+[params]
+displayName = "JA"
+isoCode = "ja"
+customCSS = ["css/style.css"]
+
+[params.author]
+name = "遠瀬緑"
+bio = "多趣味かも"
+headline = "ノシ"
+image = "img/icon.png"
+
+links = [
+    { github = "https://github.com/midry3" },
+    { twitter = "https://x.com/TMidry5" }
+]

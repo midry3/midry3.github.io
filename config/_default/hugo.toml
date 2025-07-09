@@ -7,6 +7,7 @@ defaultContentLanguage = "ja"
 theme = "blowfish"
 hasCJKLanguage = true
 defaultAppearance = "dark"
+googleAnalytics = "G-5K9YDL061V"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

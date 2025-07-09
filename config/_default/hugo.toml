@@ -6,6 +6,7 @@ publishDir = "docs"
 defaultContentLanguage = "ja"
 theme = "blowfish"
 hasCJKLanguage = true
+defaultAppearance = "dark"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

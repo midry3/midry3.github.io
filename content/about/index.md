@@ -21,3 +21,7 @@ tags = ["自己紹介"]
 
 # プロジェクト紹介
 今は[EmeralEngine](https://github.com/Emeral-Engine/EmeralEngine)というノベルゲームエンジンを作っています
+
+# 連絡先
+- tmidry5_gmail.com (_→@)
+- X([@TMidry5](https://x.com/TMidry5))のDM

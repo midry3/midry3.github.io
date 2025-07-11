@@ -1,3 +1,3 @@
-色々やってます
+[About Me](/about)
 
-Contact(\_→@): tmidry5_gmail.com, もしくはXのDMにお願いします
+Contact: tmidry5_gmail.com (\_→@), もしくはXのDMにお願いします

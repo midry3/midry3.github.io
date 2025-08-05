@@ -1,7 +1,7 @@
 +++
 title = '自己紹介'
 date = 2025-07-09T00:53:01+09:00
-categories = ["Blog"]
+categories = ["ブログ"]
 description = "自己紹介です"
 draft = false
 tags = ["自己紹介"]

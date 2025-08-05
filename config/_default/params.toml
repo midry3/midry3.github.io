@@ -1,7 +1,7 @@
 colorScheme = "blowfish"
 enableSearch = true
-defaultBackgroundImage = "/img/bg.jpg"
-defaultFeaturedImage = "/img/bg.jpg"
+# defaultBackgroundImage = "/img/bg.jpg"
+# defaultFeaturedImage = "/img/bg.jpg"
 enableCodeCopy = true
 disableImageOptimization = false
 disableImageZoom = false
@@ -11,7 +11,7 @@ layout = "fixed"
 
 [homepage]
 layout = "background"
-homepageImage = "/img/bg.jpg"
+# homepageImage = "/img/bg.jpg"
 showRecent = true
 showMoreLink = true
 cardView = true

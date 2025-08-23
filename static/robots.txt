@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /img/
+Disallow: 
 
 Sitemap: https://midry3.github.io/sitemap.xml

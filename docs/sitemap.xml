@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://midry3.github.io/dists/</loc>
-    <lastmod>2025-08-05T18:26:46+09:00</lastmod>
+    <loc>https://midry3.github.io/posts/</loc>
+    <lastmod>2025-08-23T17:28:09+09:00</lastmod>
   </url>
   <url>
-    <loc>https://midry3.github.io/dists/hakui_aoi/</loc>
-    <lastmod>2025-08-05T18:26:46+09:00</lastmod>
+    <loc>https://midry3.github.io/posts/mayoroba/</loc>
+    <lastmod>2025-08-23T17:28:09+09:00</lastmod>
   </url>
   <url>
     <loc>https://midry3.github.io/about/</loc>
@@ -16,6 +16,10 @@
   </url>
   <url>
     <loc>https://midry3.github.io/</loc>
-    <lastmod>2025-07-11T15:00:28+09:00</lastmod>
+    <lastmod>2025-08-05T17:18:25+09:00</lastmod>
+  </url>
+  <url>
+    <loc>https://midry3.github.io/posts/hakui_aoi/</loc>
+    <lastmod>2025-08-05T18:26:46+09:00</lastmod>
   </url>
 </urlset>

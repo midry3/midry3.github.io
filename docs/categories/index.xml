@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2025 遠瀬緑(Midry)</copyright>
-    <lastBuildDate>Tue, 05 Aug 2025 19:50:27 +0900</lastBuildDate><atom:link href="https://midry3.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Aug 2025 19:21:29 +0900</lastBuildDate><atom:link href="https://midry3.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>配布</title>
-      <link>https://midry3.github.io/categories/%E9%85%8D%E5%B8%83/</link>
-      <pubDate>Tue, 05 Aug 2025 19:50:27 +0900</pubDate>
+      <title>ゲーム感想</title>
+      <link>https://midry3.github.io/categories/%E3%82%B2%E3%83%BC%E3%83%A0%E6%84%9F%E6%83%B3/</link>
+      <pubDate>Sat, 23 Aug 2025 19:21:29 +0900</pubDate>
       
-      <guid>https://midry3.github.io/categories/%E9%85%8D%E5%B8%83/</guid>
+      <guid>https://midry3.github.io/categories/%E3%82%B2%E3%83%BC%E3%83%A0%E6%84%9F%E6%83%B3/</guid>
       <description></description>
       
     </item>
@@ -22,9 +22,19 @@
     <item>
       <title>ブログ</title>
       <link>https://midry3.github.io/categories/%E3%83%96%E3%83%AD%E3%82%B0/</link>
-      <pubDate>Tue, 05 Aug 2025 19:09:25 +0900</pubDate>
+      <pubDate>Tue, 05 Aug 2025 18:42:12 +0900</pubDate>
       
       <guid>https://midry3.github.io/categories/%E3%83%96%E3%83%AD%E3%82%B0/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>配布</title>
+      <link>https://midry3.github.io/categories/%E9%85%8D%E5%B8%83/</link>
+      <pubDate>Tue, 05 Aug 2025 12:00:00 +0900</pubDate>
+      
+      <guid>https://midry3.github.io/categories/%E9%85%8D%E5%B8%83/</guid>
       <description></description>
       
     </item>

@@ -49,7 +49,7 @@ Tieni presente che i nomi delle variabili forniti in questa tabella utilizzano i
 | `pagination.pagerSize`   | `10`                      | Il numero di articoli elencati in ciascuna pagina dell'elenco degli articoli.                                                                                                                                                                                                                                                                                                           |
 | `summaryLength`          | `0`                       | Il numero di parole utilizzate per generare il riepilogo dell'articolo quando non ne viene fornita una nella [front matter]({{< ref "front-matter" >}}). Un valore pari a "0" utilizzerà la prima frase. Questo valore non ha effetto quando i riepiloghi sono nascosti.                                                                                                                                |
 | `outputs.home`           | `["HTML", "RSS", "JSON"]` | I formati di output generati per il sito. Blowfish richiede HTML, RSS e JSON affinché tutti i componenti del tema funzionino correttamente.                                                                                                                                                                                                                                         |
-| `permalinks`             | _Not set_                 | Fare riferimento alla [documentazione di Hugo](https://gohugo.io/content-management/urls/#permalinks) per la configurazione del permalink.                                                                                                                                                                                                                                                                 |
+| `permalinks`             | _Not set_                 | Fare riferimento alla [documentazione di Hugo](https://gohugo.io/configuration/permalinks/) per la configurazione del permalink.                                                                                                                                                                                                                                                                 |
 | `taxonomies`             | _Not set_                 | Fare riferimento alla sezione [Organizzazione dei contenuti]({{< ref "getting-started#organising-content" >}}) per la configurazione della tassonomia.                                                                                                                                                                                                                                                      |
 <!-- prettier-ignore-end -->
 
@@ -129,7 +129,7 @@ Il file predefinito può essere utilizzato come modello per creare lingue aggiun
 | `params.displayName`   | `"EN"`             | Il nome utilizzato quando la lingua appare sul sito web.                                                                                                                                                                                                                                                                    |
 | `params.isoCode`       | `"en"`             | Il codice della lingua ISO per scopi di metadati HTML. Può essere una lingua di livello superiore (es. `en`) o una sottovariante (es. `en-AU`).                                                                                                                                                                                                |
 | `params.rtl`           | `false`            | Se si tratta o meno di un linguaggio RTL. Imposta su "true" per ridisporre il contenuto da destra a sinistra. Blowfish supporta pienamente l'uso simultaneo dei linguaggi RTL e LTR e si adatterà dinamicamente ad entrambi.                                                                                                                       |
-| `params.dateFormat`    | `"2 January 2006"` | Come vengono formattate le date in questa lingua. Fare riferimento alla [documentazione di Hugo](https://gohugo.io/functions/format/#gos-layout-string) per i formati accettabili.                                                                                                                                                                          |
+| `params.dateFormat`    | `"2 January 2006"` | Come vengono formattate le date in questa lingua. Fare riferimento alla [documentazione di Hugo](https://gohugo.io/functions/time/format/#layout-string) per i formati accettabili.                                                                                                                                                                          |
 | `params.logo`          | _Not set_          | Il percorso relativo al file del logo del sito all'interno della cartella "assets/". Il file del logo deve essere fornito con una risoluzione 2x e supporta qualsiasi dimensione dell'immagine.                                                                                                                                                                  |
 | `params.secondaryLogo` | _Not set_          | The relative path to the secondary site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions. This should have an inverted/contrasting colour scheme to `logo`. If set, this logo will be shown when users toggle from the `defaultAppearance` mode. |
 | `params.description`   | _Not set_          | The website description. This will be used in the site metadata.                                                                                                                                                                                                                                                           |
@@ -171,6 +171,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 | `colorScheme`                   | `"blowfish"` | The theme colour scheme to use. Valid values are `blowfish` (default), `avocado`, `fire`, `ocean`, `forest`, `princess`, `neon`, `bloody`, `terminal`, `marvel`, `noir`, `autumn`, `congo`, and`slate`. Refer to the [Colour Schemes]({{< ref "getting-started#colour-schemes" >}}) section for more details. |
 | `defaultAppearance`             | `"light"`    | The default theme appearance, either `light` or `dark`.                                                                                                                                                                                                                                                       |
 | `autoSwitchAppearance`          | `true`       | Whether the theme appearance automatically switches based upon the visitor's operating system preference. Set to `false` to force the site to always use the `defaultAppearance`.                                                                                                                             |
+| `enableA11y`                   | `false`      | Whether to enable the accessibility toggle button. |
 | `enableSearch`                  | `false`      | Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#configurazioni-del-sito) being set correctly.                                                                                        |
 | `enableCodeCopy`                | `false`      | Whether copy-to-clipboard buttons are enabled for `<code>` blocks. The `highlight.noClasses` parameter must be set to `false` for code copy to function correctly. Read more about [other configuration files](#other-configuration-files) below.                                                             |
 | `mainSections`                  | _Not set_    | The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.                                                                                                                                                                  |
@@ -280,7 +281,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 
 | Name                    | Default                | Description                                                                                                                                                                                 |
 | ----------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sitemap.excludedKinds` | `["taxonomy", "term"]` | Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values. |
+| `sitemap.excludedKinds` | `["taxonomy", "term"]` | Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/methods/page/kind/) for acceptable values. |
 
 ### Taxonomy
 
@@ -365,12 +366,18 @@ Many of the article defaults here can be overridden on a per article basis by sp
 | `verification.yandex`    | _Not set_ | The site verification string provided by Yandex to be included in the site metadata.    |
 <!-- prettier-ignore-end -->
 
-## RSSNext
+### RSSNext
 
 | Name                     | Default   | Description                                                                                                                          |
 | ------------------------ | --------- |--------------------------------------------------------------------------------------------------------------------------------------|
 | `rssnext.feedId`    | _Not set_ | The rss `feedId` string provided by [RSSNext/Follow](https://follow.is/) to be included in the `rss.xml`, which can helps to claim rss feed as your own. |
 | `rssnext.userId`      | _Not set_ | The rss `userId` string provided by [RSSNext/Follow](https://follow.is/) to be included in the `rss.xml`, which can helps to claim rss feed as your own.     |
+
+### Advertisement
+
+| Name                     | Default   | Description |
+| ------------------------ | --------- |-------------|
+| `advertisement.adsense`    | _Not set_ | Your Google AdSense Publisher ID (e.g. `ca-pub-1234567890abcdef`). Set this parameter to enable AdSense ads on your site. |
 
 ## Other configuration files
 

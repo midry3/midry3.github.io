@@ -48,7 +48,7 @@ npx blowfish-tools
 | `pagination.pagerSize`   | `10`                      | 記事リストの各ページにリストされる記事の数です。                                                                                                                                                                                                                                                                                                                                      |
 | `summaryLength`          | `0`                       | [フロントマター]({{< ref "front-matter" >}})で提供されていない場合に、記事の概要を生成するために使用される単語の数です。 値 `0` は最初の文を使用します。 概要が非表示になっている場合、この値は効果がありません。                                                                                                                                                                     |
 | `outputs.home`           | `["HTML", "RSS", "JSON"]` | サイト用に生成される出力形式です。 Blowfish では、すべてのテーマコンポーネントが正しく機能するために HTML、RSS、JSON が必要です。                                                                                                                                                                                                                                                     |
-| `permalinks`             | _未設定_                  | パーマリンクの設定については、[Hugo ドキュメント](https://gohugo.io/content-management/urls/#permalinks)を参照してください。                                                                                                                                                                                                                                                          |
+| `permalinks`             | _未設定_                  | パーマリンクの設定については、[Hugo ドキュメント](https://gohugo.io/configuration/permalinks/)を参照してください。                                                                                                                                                                                                                                                          |
 | `taxonomies`             | _未設定_                  | 分類の設定については、[コンテンツの整理]({{< ref "getting-started#コンテンツの整理" >}})セクションを参照してください。                                                                                                                                                                                                                                                                |
 <!-- prettier-ignore-end -->
 
@@ -128,7 +128,7 @@ Blowfish は多言語ウェブサイト向けに最適化されており、テ�
 | `params.displayName`   | `"EN"`             | ウェブサイトに言語が表示されるときに使用される名前です。                                                                                                                                                                                                                                                                                 |
 | `params.isoCode`       | `"en"`             | HTML メタデータ用の ISO 言語コードです。トップレベル言語（例： `en`）またはサブバリアント（例： `en-AU`）にすることができます。                                                                                                                                                                                                          |
 | `params.rtl`           | `false`            | これが RTL 言語かどうかです。`true` に設定すると、コンテンツが右から左に並べ替えられます。 Blowfish は RTL 言語と LTR 言語の同時使用を完全にサポートしており、両方に動的に調整されます。                                                                                                                                                 |
-| `params.dateFormat`    | `"2 January 2006"` | この言語での日付のフォーマット方法です。使用できる形式については、[Hugo ドキュメント](https://gohugo.io/functions/format/#gos-layout-string)を参照してください。                                                                                                                                                                         |
+| `params.dateFormat`    | `"2 January 2006"` | この言語での日付のフォーマット方法です。使用できる形式については、[Hugo ドキュメント](https://gohugo.io/functions/time/format/#layout-string)を参照してください。                                                                                                                                                                         |
 | `params.logo`          | _未設定_           | `assets/` フォルダ内のサイトロゴファイルへの相対パスです。ロゴファイルは2倍の解像度で提供する必要があり、あらゆる画像サイズをサポートしています。                                                                                                                                                                                        |
 | `params.secondaryLogo` | _未設定_           | `assets/` フォルダ内のセカンダリサイトロゴファイルへの相対パスです。 ロゴファイルは2倍の解像度で提供する必要があり、あらゆる画像サイズをサポートしています。 これは、`logo` とは反転/対照的なカラースキームである必要があります。設定されている場合、このロゴは、ユーザーが `defaultAppearance` モードから切り替えたときに表示されます。 |
 | `params.description`   | _未設定_           | ウェブサイトの説明です。これはサイトのメタデータで使用されます。                                                                                                                                                                                                                                                                         |
@@ -171,6 +171,7 @@ Blowfish は、テーマの機能を制御する多数の設定パラメータ�
 | `colorScheme`                   | `"blowfish"` | 使用するテーマのカラースキームです。有効な値は、`blowfish`（デフォルト）、`avocado`、`fire`、`ocean`、`forest`、`princess`、`neon`、`bloody`、`terminal`、`marvel`、`noir`、`autumn`、`congo`、`slate` です。詳細については、[カラースキーム]({{< ref "getting-started#カラースキーム" >}})セクションを参照してください。 |
 | `defaultAppearance`             | `"light"`    | デフォルトのテーマの外観です。`light` または `dark` のいずれかです。                                                                                                                                                                                                                                                      |
 | `autoSwitchAppearance`          | `true`       | 訪問者のオペレーティングシステムの設定に基づいてテーマの外観を自動的に切り替えるかどうかです。`false` に設定すると、サイトは常に `defaultAppearance` を使用します。                                                                                                                                                       |
+| `enableA11y` | `false` | アクセシビリティ切り替えボタンを有効にするかどうか。 |
 | `enableSearch`                  | `false`      | サイト内検索が有効かどうかです。`true` に設定すると、検索機能が有効になります。検索機能は、[サイト設定](#サイト設定)の `outputs.home` 設定が正しく設定されているかどうかに依存することに注意してください。                                                                                                                |
 | `enableCodeCopy`                | `false`      | `<code>` ブロックのクリップボードへのコピーボタンを有効にするかどうかです。コードコピーが正しく機能するには、`highlight.noClasses` パラメータを `false` に設定する必要があります。以下の[その他の設定ファイル](#その他の設定ファイル)について読んでください。                                                             |
 | `mainSections`                  | _未設定_     | 最近の記事リストに表示するセクションです。指定しない場合は、記事数が最も多いセクションが使用されます。                                                                                                                                                                                                                    |
@@ -280,7 +281,7 @@ Blowfish は、テーマの機能を制御する多数の設定パラメータ�
 
 | 名前                    | デフォルト             | 説明                                                                                                                                                                                         |
 | ----------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sitemap.excludedKinds` | `["taxonomy", "term"]` | 生成された `/sitemap.xml` ファイルから除外するコンテンツの種類。許容される値については、[Hugo のドキュメント](https://gohugo.io/templates/section-templates/#page-kinds)を参照してください。 |
+| `sitemap.excludedKinds` | `["taxonomy", "term"]` | 生成された `/sitemap.xml` ファイルから除外するコンテンツの種類。許容される値については、[Hugo のドキュメント](https://gohugo.io/methods/page/kind/)を参照してください。 |
 
 ### タクソノミー(Taxonomy)
 
@@ -365,12 +366,18 @@ Blowfish は、テーマの機能を制御する多数の設定パラメータ�
 | `verification.yandex`    | _未設定_   | サイトメタデータに含まれる、Yandex が提供するサイト確認文字列。    |
 <!-- prettier-ignore-end -->
 
-## RSSNext
+### RSSNext
 
 | 名前             | デフォルト | 説明                                                                                                                                                        |
 | ---------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `rssnext.feedId` | _未設定_   | [RSSNext/Follow](https://follow.is/) によって提供される rss `feedId` 文字列。`rss.xml` に含まれ、rss フィードを自身のものとしてクレームするのに役立ちます。 |
 | `rssnext.userId` | _未設定_   | [RSSNext/Follow](https://follow.is/) によって提供される rss `userId` 文字列。`rss.xml` に含まれ、rss フィードを自身のものとしてクレームするのに役立ちます。 |
+
+### Advertisement
+
+| 名前                     | デフォルト | 説明                                                               |
+| ------------------------ | ---------- | ------------------------------------------------------------------ |
+| `advertisement.adsense`  | _未設定_   | Google AdSense パブリッシャー ID （例：`ca-pub-1234567890abcdef`）。このパラメータを設定すると、サイト上で AdSense 広告が有効になります。 |
 
 ## その他の設定ファイル
 

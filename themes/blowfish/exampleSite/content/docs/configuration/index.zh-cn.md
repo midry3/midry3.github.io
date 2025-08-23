@@ -48,7 +48,7 @@ Blowfish 主题支持了 Hugo 框架中定义的所有标准配置变量。但�
 | `pagination.pagerSize`   | `10`                      | 定义文章列表中，每页展示的文章数量。                                                                                                                                                                                                                                                                 |
 | `summaryLength`          | `0`                       | 当[扉页参数]({{< ref "front-matter" >}}) 中没有提供文章摘要时，此参数定义了自动生成文章摘要的单词数量。如果值为`0`，则默认使用第一句话作为摘要。当摘要被隐藏，这个值没有任何效果。                                                                                                                   |
 | `outputs.home`           | `["HTML", "RSS", "JSON"]` | 为站点自动生成输出格式。Blowfish 要求 HTML、RSS 和 JSON 都需要有，以保证主题组件可以正常运作。                                                                                                                                                                                                       |
-| `permalinks`             | 无                        | 参考 [Hugo 文档](https://gohugo.io/content-management/urls/#permalinks) 中的自定义文章的固定链接配置。                                                                                                                                                                                               |
+| `permalinks`             | 无                        | 参考 [Hugo 文档](https://gohugo.io/configuration/permalinks/) 中的自定义文章的固定链接配置。                                                                                                                                                                                               |
 | `taxonomies`             | 无                        | 参考 [整理内容]({{< ref "getting-started#organising-content" >}}) 中的分类器配置。                                                                                                                                                                                                                   |
 <!-- prettier-ignore-end -->
 
@@ -127,7 +127,7 @@ Blowfish 主题目前默认支持了以下语言：
 | `params.displayName`   | `"EN"`             | 语言在网站中的展示名。                                                                                                                                                                                                         |
 | `params.isoCode`       | `"en"`             | 用于 HTML 元数据的 ISO 语言代码。他可以是一个高层级语言（例如 `en`），也可以是一个变体子语言（例如 `en-au`）。                                                                                                                 |
 | `params.rtl`           | `false`            | 用于指定是否是 RTL 语言。设置为 `true` 则网站会从右向左重拍内容。Blowfish 完全支持同时使用 RTL 和 LTR 语言，并将动态调整。                                                                                                     |
-| `params.dateFormat`    | `"2 January 2006"` | 用于指定如何日期格式化。参考 [Hugo 文档](https://gohugo.io/functions/format/#gos-layout-string) 了解可以支持的格式。                                                                                                           |
+| `params.dateFormat`    | `"2 January 2006"` | 用于指定如何日期格式化。参考 [Hugo 文档](https://gohugo.io/functions/time/format/#layout-string) 了解可以支持的格式。                                                                                                           |
 | `params.logo`          | 无                 | `assets/` 文件夹中站点 logo 的相对路径。该 logo 文件需要提供 2x 分辨率并支持任何图像尺寸。                                                                                                                                     |
 | `params.secondaryLogo` | 无                 | `assets/` 文件夹中站点次要 logo 的相对路径。该 logo 文件需要提供 2x 分辨率并支持任何图像尺寸。这个 logo 的颜色方案应该是和上面的是相反或对比的。如果设置了这个值，当用户从 `defaultAppearance` 模式切换时，将会显示这个 logo。 |
 | `params.description`   | 无                 | 网站表述。此参数将会被用作站点元数据。                                                                                                                                                                                         |
@@ -171,6 +171,7 @@ Blowfish 提供了大量控制主题功能的配置参数，下面的表格中�
 | `colorScheme`                   | `"blowfish"` | 主题使用的颜色方案。合法的值有： `blowfish` （默认）、`avocado`、`fire`、`ocean`、`forest`、`princess`、`neon`、`bloody`、`terminal`、`marvel`、`noir`、`autumn`、`congo` 和 `slate`。 具体参考[颜色方案]({{< ref "getting-started#colour-schemes" >}})以获取更多信息。 |
 | `defaultAppearance`             | `"light"`    | 默认的主题外观，可以是 `light` 或者 `dark`。                                                                                                                                                                                                                            |
 | `autoSwitchAppearance`          | `true`       | 主题外观是否根据访问者操作系统的偏好自动切换。设置为 `false` 会强制网站始终使用 `defaultAppearance`。                                                                                                                                                                   |
+| `enableA11y`                   | `false`      | 是否启用无障碍切换按钮。 |
 | `enableSearch`                  | `false`      | 是否开启网站的搜索功能，设为 `true` 即为启用。注意，搜索功能依赖于[站点设置](#网站配置)中的 `outputs.home` 设置，请确保此值配置正确。                                                                                                                         |
 | `enableCodeCopy`                | `false`      | 是否可以将`<code>`代码块复制到剪贴板。想要使用代码复制功能，需要将 `highlight.noClasses` 参数设置为 `false`。 阅读 [其他配置文件](#其他配置文件) 以获取更多信息。                                                                                          |
 | `replyByEmail`                  | `false`      | 是否在发布后启用“通过邮件回复”的链接。如果使用，则必须设置 `config/_default/languages.en.toml` 中的 `params.author.email` 参数。                                                                                                                                                                        |
@@ -277,14 +278,14 @@ Blowfish 提供了大量控制主题功能的配置参数，下面的表格中�
 | `list.groupByYear`                 | `true`  | 是否根据年做聚合。                                                                                                                                                        |
 | `list.cardView`                    | `false` | 将列表展示为卡片容器。                                                                                                                                                    |
 | `list.cardViewScreenWidth`         | `false` | 增强列表中卡片的宽度，使其可以占据可用的全部宽度。                                                                                                                        |
-| `list.constrainItemsWidth`         | `false` | 将项目宽度限制为 `prose` 以提高可读性。在没有 featurn 图片的时候非常有用。                                                                                                |
+| `list.constrainItemsWidth`         | `false` | 将项目宽度限制为 `prose` 以提高可读性。在没有 feature 图片的时候非常有用。                                                                                                |
 | `list.showTableOfContents`         | `false`   | 是否在文章中显示目录表。                                                                                                                                                                                                 |
 
 ### 网站地图
 
 | 名称                    | 默认值                 | 描述                                                                                                                                |
 | ----------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `sitemap.excludedKinds` | `["taxonomy", "term"]` | 从生成的 `/sitemap.xml` 文件中排除的内容。 具体的配置请参考[Hugo 文档](https://gohugo.io/templates/section-templates/#page-kinds)。 |
+| `sitemap.excludedKinds` | `["taxonomy", "term"]` | 从生成的 `/sitemap.xml` 文件中排除的内容。 具体的配置请参考[Hugo 文档](https://gohugo.io/methods/page/kind/)。 |
 
 ### 分类法
 
@@ -370,12 +371,18 @@ Blowfish 提供了大量控制主题功能的配置参数，下面的表格中�
 | `verification.fediverse` | 无     | 联邦域用户名，包括在网站元数据中。将服务器域名包含在用户名中，例如 `@you@instanceaddress.tld`。 |
 <!-- prettier-ignore-end -->
 
-## RSSNext
+### RSSNext
 
-| Name                     | Default   | Description                                                                                 |
+| 名称                     | 默认值   | 描述                                                                                 |
 | ------------------------ | --------- |---------------------------------------------------------------------------------------------|
-| `rssnext.feedId`    | _Not set_ | [RSSNext/Follow](https://follow.is) 提供的 `feeId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己。 |
-| `rssnext.userId`      | _Not set_ | [RSSNext/Follow](https://follow.is) 提供的 `userId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己      |
+| `rssnext.feedId`    | _无_ | [RSSNext/Follow](https://follow.is) 提供的 `feeId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己。 |
+| `rssnext.userId`      | _无_ | [RSSNext/Follow](https://follow.is) 提供的 `userId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己      |
+
+### Advertisement
+
+| 名称                     | 默认值   | 描述 |
+| ------------------------ | --------- |-------------|
+| `advertisement.adsense`    | _无_ | 您的 Google AdSense 发布商 ID (例如 `ca-pub-1234567890abcdef`)。设置此参数可在您的网站上启用 AdSense 广告。 |
 
 ## 其他配置文件
 

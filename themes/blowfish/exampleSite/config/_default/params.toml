@@ -9,6 +9,7 @@ colorScheme = "blowfish"
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 
+enableA11y = false
 enableSearch = true
 enableCodeCopy = true
 
@@ -24,14 +25,14 @@ disableTextInHeader = false
 
 defaultBackgroundImage = "/img/background.svg"
 defaultFeaturedImage = "/img/featured.svg"
-defaultSocialImage = "/img/blowfish.jpg"
+defaultSocialImage = "/img/blowfish_banner.png"
 
 highlightCurrentMenuArea = true
 smartTOC = true
 smartTOCHideUnfocusedChildren = false
 
-# giteaDefaultServer = "https://git.fsfe.org"
-# forgejoDefaultServer = "https://v8.next.forgejo.org"
+#giteaDefaultServer = "https://git.fsfe.org"
+#forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
 

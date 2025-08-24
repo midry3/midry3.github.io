@@ -16,12 +16,12 @@ tags = ["自己紹介"]
 - イラストやドット絵
 
 # 趣味
-- ゲーム(最近はノベルゲーム)
+- ドット絵が綺麗なゲームやシナリオが面白いゲーム
 - 美味しい物を食べる
 
 # プロジェクト紹介
 今は[EmeralEngine](https://github.com/Emeral-Engine/EmeralEngine)というノベルゲームエンジンを作っています
 
 # 連絡先
-- tmidry5_gmail.com (_→@)
+- tmidry_protonmail.com (_→@)
 - X([@TMidry5](https://x.com/TMidry5))のDM

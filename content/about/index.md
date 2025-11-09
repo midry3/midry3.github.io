@@ -1,6 +1,6 @@
 +++
 title = '自己紹介'
-date = 2025-11-10T00:53:01+09:00
+date = 2025-11-09T00:53:01+09:00
 categories = ["ブログ"]
 description = "自己紹介です"
 draft = false

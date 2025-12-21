@@ -1,0 +1,16 @@
+baseURL = "https://midry3.github.io/"
+languageCode = "ja-jp"
+title = "Midryのホームページ"
+timeZone = "Asia/Tokyo"
+publishDir = "docs"
+defaultContentLanguage = "ja"
+theme = "blowfish"
+hasCJKLanguage = true
+defaultAppearance = "dark"
+googleAnalytics = "G-5K9YDL061V"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[frontmatter]
+date = [":fileModTime"]

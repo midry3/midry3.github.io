@@ -1,0 +1,34 @@
+colorScheme = "blowfish"
+enableSearch = true
+# defaultBackgroundImage = "/img/bg.jpg"
+# defaultFeaturedImage = "/img/bg.jpg"
+enableCodeCopy = true
+disableImageOptimization = false
+disableImageZoom = false
+
+[header]
+layout = "fixed"
+
+[homepage]
+layout = "background"
+# homepageImage = "/img/bg.jpg"
+showRecent = true
+showMoreLink = true
+cardView = true
+layoutBackgroundBlur = true
+showHero = true
+
+[article]
+showDate = true
+showDateUpdated = true
+showReadingTime = true
+showTableOfContents = true
+showTaxonomies = true
+showWordCount = false
+sharingLinks = ["twitter"]
+layoutBackgroundBlur = true
+showAuthor = true
+
+[list]
+showCards = true
+cardView = true

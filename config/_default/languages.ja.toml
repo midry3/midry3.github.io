@@ -1,0 +1,19 @@
+title = "遠瀬緑のホームページ"
+languageCode = "ja-jp"
+languageName = "日本語"
+
+[params]
+displayName = "JA"
+isoCode = "ja"
+customCSS = ["css/custom.css"]
+
+[params.author]
+name = "遠瀬緑(Midry)"
+bio = "ドッター兼プログラマー"
+headline = "一般大学生"
+image = "/img/icon.png"
+
+links = [
+    { github = "https://github.com/midry3" },
+    { twitter = "https://x.com/ToseMidry" }
+]

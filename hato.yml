@@ -1,0 +1,21 @@
+# https://github.com/midry3/hato
+
+default:
+  aliases:
+    - p
+    - push
+    - u
+    - update
+  nargs: 1
+  inform:
+    - git add .
+    - git status
+  checklist:
+    - ok?
+  actions:
+    - rm -r docs
+    - hugo
+    - git add .
+    - git commit -m %1
+    - git pull origin main
+    - git push origin main

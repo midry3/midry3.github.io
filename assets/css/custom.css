@@ -7,3 +7,13 @@
 html {
   font-size: 14pt;
 }
+
+.author img {
+  image-rendering: pixelated;
+}
+
+/* 拡大時 */
+.medium-zoom-image--opened {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

@@ -37,4 +37,4 @@ tags = ["自己紹介"]
 
 # 連絡先
 - tmidry_protonmail.com (_→@)
-- X([@ToseMidry](https://x.com/ToseMidry))のDM
+- X([@Tose_Midry](https://x.com/Tose_Midry))のDM

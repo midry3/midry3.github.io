@@ -9,8 +9,7 @@ customCSS = ["css/custom.css"]
 
 [params.author]
 name = "遠瀬緑(Midry)"
-bio = "ドッター兼プログラマー"
-headline = "一般大学生"
+bio = "ゲーム開発者"
 image = "/img/icon.png"
 
 links = [

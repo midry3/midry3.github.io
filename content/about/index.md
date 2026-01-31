@@ -34,6 +34,7 @@ tags = ["自己紹介"]
 - [Qiita](https://qiita.com/midry3125)
 - [Zenn](https://zenn.dev/midry3125)
 - [note](https://note.com/midry3125)
+- [FANBOX](https://tmidry.fanbox.cc)
 
 # 連絡先
 - tmidry_protonmail.com (_→@)

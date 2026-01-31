@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ブログ on 遠瀬緑のホームページ</title>
-    <link>http://localhost:1313/categories/%E3%83%96%E3%83%AD%E3%82%B0/</link>
+    <link>https://midry3.github.io/categories/%E3%83%96%E3%83%AD%E3%82%B0/</link>
     <description>Recent content in ブログ on 遠瀬緑のホームページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2026 遠瀬緑(Midry)</copyright>
-    <lastBuildDate>Wed, 07 Jan 2026 20:53:02 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/%E3%83%96%E3%83%AD%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jan 2026 20:53:02 +0900</lastBuildDate><atom:link href="https://midry3.github.io/categories/%E3%83%96%E3%83%AD%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>自己紹介</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://midry3.github.io/about/</link>
       <pubDate>Wed, 07 Jan 2026 20:53:02 +0900</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://midry3.github.io/about/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;自己紹介
     &lt;div id=&#34;自己紹介&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -32,13 +32,13 @@
     alt=&#34;アイコン&#34;
     width=&#34;640&#34;
     height=&#34;640&#34;
-    src=&#34;http://localhost:1313/img/icon.png&#34;
-    srcset=&#34;http://localhost:1313/img/icon.png 800w, http://localhost:1313/img/icon.png 1280w&#34;
+    src=&#34;https://midry3.github.io/img/icon.png&#34;
+    srcset=&#34;https://midry3.github.io/img/icon.png 800w, https://midry3.github.io/img/icon.png 1280w&#34;
     sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;
-    data-zoom-src=&#34;http://localhost:1313/img/icon.png&#34;&gt;&lt;figcaption&gt;アイコン&lt;/figcaption&gt;&lt;/figure&gt;
+    data-zoom-src=&#34;https://midry3.github.io/img/icon.png&#34;&gt;&lt;figcaption&gt;アイコン&lt;/figcaption&gt;&lt;/figure&gt;
 
 大学生やってます&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/about/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://midry3.github.io/about/featured.png" />
     </item>
     
   </channel>

@@ -1,3 +1,4 @@
+
 # https://github.com/midry3/hato
 
 default:
@@ -13,7 +14,7 @@ default:
   checklist:
     - ok?
   actions:
-    - rm -r docs
+    - rm -r docs || true
     - hugo
     - git add .
     - git commit -m %1
